@@ -165,6 +165,8 @@
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     animation: rotate 30s linear infinite;
+    z-index: 0;
+    pointer-events: none;
   }
   .hero-orbit::after {
     content: '';
@@ -195,7 +197,7 @@
   h1 { font-family: 'Orbitron', sans-serif; font-size: clamp(2.2rem, 5.5vw, 4.5rem); font-weight: 900; line-height: 1.1; color: var(--text); margin-bottom: 1.5rem; }
   h1 span { color: var(--accent); }
   .hero-sub { font-size: 1.15rem; color: var(--muted); max-width: 600px; line-height: 1.75; margin-bottom: 2.5rem; }
-  .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+  .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; position: relative; z-index: 2; }
   /* MISSION SNAPSHOT */
   #mission-snap { background: var(--bg-alt); }
   .snap-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
