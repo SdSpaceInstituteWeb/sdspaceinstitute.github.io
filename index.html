@@ -37,7 +37,7 @@
       radial-gradient(ellipse at 15% 10%, rgba(26,171,184,0.07) 0%, transparent 55%),
       radial-gradient(ellipse at 85% 85%, rgba(192,128,0,0.05) 0%, transparent 50%);
     pointer-events: none;
-    z-index: 0;
+    z-index: -1;
   }
   nav {
     position: fixed;
@@ -156,6 +156,11 @@
     text-align: center;
     padding: 8rem 2rem 4rem;
     position: relative;
+    z-index: 1;
+  }
+  #home h1, #home p, #home .hero-tag, #home .btn-group {
+    position: relative;
+    z-index: 3;
   }
   .hero-orbit {
     position: absolute;
