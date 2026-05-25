@@ -62,6 +62,11 @@
   .btn-donate { width: 100%; padding: 1rem; background: var(--accent); color: #fff; border: none; border-radius: 6px; font-family: 'Orbitron', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em; cursor: pointer; transition: all 0.2s; text-decoration: none; display: block; text-align: center; }
   .btn-donate:hover { background: var(--accent-dark); transform: translateY(-2px); }
   .tax-note { font-size: 0.78rem; color: var(--muted); text-align: center; margin-top: 1rem; line-height: 1.5; }
+  .why-heading { font-family: 'Orbitron', sans-serif; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; margin-top: 0.25rem; }
+  .why-list { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+  .why-list li { color: var(--text); font-size: 0.9rem; line-height: 1.6; padding: 0.35rem 0 0.35rem 1.4rem; position: relative; border-bottom: 1px solid var(--border); }
+  .why-list li:last-child { border-bottom: none; }
+  .why-list li::before { content: '›'; position: absolute; left: 0; color: var(--accent); font-size: 1rem; font-weight: 700; line-height: 1.6; }
   #alt { background: var(--bg-alt); }
   @media (max-width: 768px) { .donate-grid, .fund-grid { grid-template-columns: 1fr; } }
 
@@ -188,6 +193,13 @@
       <div class="donate-box">
         <h3>Make a Donation</h3>
         <p>All contributions support SDSI's applied research programs, satellite missions, and organizational operations.</p>
+        <p class="why-heading">Why Your Support Matters</p>
+        <ul class="why-list">
+          <li>Funds student engineers building real flight hardware</li>
+          <li>Supports space radiation monitoring that protects GPS and defense systems</li>
+          <li>Keeps Sentinel-Bio+ on track for a 2027 constellation launch</li>
+          <li>Builds San Diego's next generation of aerospace talent</li>
+        </ul>
         <stripe-buy-button
           buy-button-id="buy_btn_1TanxVCGMMDiQAyZoJOqh7km"
           publishable-key="pk_live_51T9ABMCGMMDiQAyZPEMzTOTNfbDHnTN24wlQnjvC04XMUexgRRV7CcukfzExua9ytvAgKquswtIUjKll0orlCEyR00VPE6v292"
