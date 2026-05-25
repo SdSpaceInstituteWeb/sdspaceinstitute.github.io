@@ -32,6 +32,7 @@
   .mobile-menu a.mobile-sub { padding-left: 1.5rem; font-size: 0.85rem; color: var(--muted); }
   section { position: relative; z-index: 1; }
   .section-inner { max-width: 1100px; margin: 0 auto; padding: 6rem 2rem; }
+  .section-inner.nav-offset { padding-top: 9rem; }
   .section-tag { font-family: 'Orbitron', sans-serif; font-size: 0.65rem; letter-spacing: 0.3em; color: var(--gold); text-transform: uppercase; margin-bottom: 1rem; }
   h2 { font-family: 'Orbitron', sans-serif; font-size: clamp(1.6rem, 3.2vw, 2.5rem); font-weight: 700; margin-bottom: 1.5rem; line-height: 1.2; color: var(--text); }
   .divider { width: 60px; height: 2px; background: linear-gradient(90deg, var(--accent), var(--gold)); margin-bottom: 2.5rem; }
@@ -40,10 +41,6 @@
   .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); }
   .btn-outline { background: transparent; color: var(--gold); border: 1.5px solid var(--gold); }
   .btn-outline:hover { background: var(--gold-light); transform: translateY(-2px); }
-  .page-header { padding: 9rem 2rem 3rem; max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; display: grid; grid-template-columns: 1fr auto; gap: 4rem; align-items: center; }
-  .page-header h1 { font-family: 'Orbitron', sans-serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: var(--text); margin-bottom: 1rem; line-height: 1.15; }
-  .page-header p { font-size: 1.05rem; color: var(--muted); line-height: 1.7; }
-  .page-divider { width: 60px; height: 2px; background: linear-gradient(90deg, var(--accent), var(--gold)); margin: 1.5rem 0 0; }
   footer { background: var(--text); padding: 2.5rem 4rem; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .footer-logo { font-family: 'Orbitron', sans-serif; font-size: 0.85rem; color: var(--accent); letter-spacing: 0.1em; text-decoration: none; }
   .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.4); }
@@ -69,24 +66,6 @@
   .why-list li::before { content: '›'; position: absolute; left: 0; color: var(--accent); font-size: 1rem; font-weight: 700; line-height: 1.6; }
   #alt { background: var(--bg-alt); }
   @media (max-width: 768px) { .donate-grid, .fund-grid { grid-template-columns: 1fr; } }
-  @media (max-width: 900px) { .page-header { grid-template-columns: 1fr; } }
-
-  /* Donation rocket tracker */
-  .donate-rocket-tracker { display: flex; flex-direction: column; align-items: center; }
-  .donate-rocket-wrap { display: flex; align-items: flex-end; gap: 10px; }
-  .donate-rocket-col { display: flex; flex-direction: column; align-items: center; }
-  .donate-rocket-tube { width: 18px; height: 240px; background: rgba(26,171,184,0.1); border: 1.5px solid rgba(26,171,184,0.25); border-radius: 9px; position: relative; overflow: hidden; }
-  .donate-rocket-fill { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, #1AABB8, rgba(26,171,184,0.45)); border-radius: 0 0 7px 7px; transition: height 1.2s ease; }
-  .donate-tube-tick { position: absolute; left: -3px; right: -3px; height: 1.5px; background: #C08000; opacity: 0.55; }
-  .donate-launch-pad { width: 36px; height: 8px; background: #1AABB8; border-radius: 3px; margin-top: 3px; }
-  .donate-milestones { height: 240px; position: relative; width: 134px; }
-  .donate-milestone { position: absolute; left: 0; display: flex; align-items: center; gap: 8px; transform: translateY(50%); }
-  .d-dash { display: block; width: 16px; border-top: 2px dashed #C08000; flex-shrink: 0; }
-  .d-label { font-size: 0.72rem; color: var(--text); line-height: 1.35; }
-  .d-label strong { display: block; font-family: 'Orbitron', sans-serif; font-size: 0.62rem; color: #C08000; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1px; }
-  .donate-raised-label { font-family: 'Orbitron', sans-serif; font-size: 0.8rem; color: var(--text); margin-top: 1rem; text-align: center; }
-  .donate-raised-label span { color: var(--muted); font-family: 'Outfit', sans-serif; font-size: 0.75rem; font-weight: 400; }
-  @media (max-width: 900px) { .donate-rocket-tracker { display: none; } }
 
   .hamburger {
     display: none;
@@ -168,62 +147,8 @@
   </div>
 </nav>
 
-<div class="page-header">
-  <div>
-    <p class="section-tag">Support SDSI</p>
-    <h1>Donate</h1>
-    <p>Sentinel-Bio+ is built by students who chose to do something that matters. Your donation keeps the mission moving.</p>
-    <div class="page-divider"></div>
-  </div>
-  <div class="donate-rocket-tracker">
-    <div class="donate-rocket-wrap">
-      <div class="donate-rocket-col">
-        <svg width="38" height="72" viewBox="0 0 38 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- body -->
-          <path d="M19 2 C10 12 7 28 7 42 L31 42 C31 28 28 12 19 2Z" fill="#1AABB8"/>
-          <!-- window -->
-          <circle cx="19" cy="26" r="5" fill="white" opacity="0.9"/>
-          <circle cx="19" cy="26" r="3" fill="#1AABB8" opacity="0.5"/>
-          <!-- fins left -->
-          <path d="M7 42 L2 56 L10 50 L7 42Z" fill="#C08000"/>
-          <!-- fins right -->
-          <path d="M31 42 L36 56 L28 50 L31 42Z" fill="#C08000"/>
-          <!-- base -->
-          <rect x="10" y="42" width="18" height="5" rx="1" fill="#0D8090"/>
-          <!-- exhaust glow -->
-          <ellipse cx="19" cy="49" rx="6" ry="3" fill="#C08000" opacity="0.35"/>
-          <!-- nose tip accent -->
-          <circle cx="19" cy="4" r="2" fill="white" opacity="0.6"/>
-        </svg>
-        <div class="donate-rocket-tube">
-          <div class="donate-rocket-fill" style="height: 0%;"></div>
-          <div class="donate-tube-tick" style="bottom: 72%;"></div>
-          <div class="donate-tube-tick" style="bottom: 44%;"></div>
-          <div class="donate-tube-tick" style="bottom: 16%;"></div>
-        </div>
-        <div class="donate-launch-pad"></div>
-      </div>
-      <div class="donate-milestones">
-        <div class="donate-milestone" style="bottom: 72%;">
-          <span class="d-dash"></span>
-          <div class="d-label"><strong>Constellation Launch</strong>TBD</div>
-        </div>
-        <div class="donate-milestone" style="bottom: 44%;">
-          <span class="d-dash"></span>
-          <div class="d-label"><strong>Hardware &amp; Testing</strong>TBD</div>
-        </div>
-        <div class="donate-milestone" style="bottom: 16%;">
-          <span class="d-dash"></span>
-          <div class="d-label"><strong>Engineering Prototype</strong>TBD</div>
-        </div>
-      </div>
-    </div>
-    <p class="donate-raised-label">$0 <span>of TBD goal</span></p>
-  </div>
-</div>
-
 <section>
-  <div class="section-inner">
+  <div class="section-inner nav-offset">
     <div class="donate-grid">
       <div class="donate-text">
         <p class="section-tag">Where It Goes</p>
