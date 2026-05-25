@@ -6,6 +6,7 @@
 <title>Donate, San Diego Space Institute</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script async src="https://js.stripe.com/v3/buy-button.js"></script>
 <style>
   :root {
     --bg: #FFFFFF; --bg-alt: #F0F7F9; --text: #0D2B35; --muted: #4A7A8A;
@@ -187,7 +188,10 @@
       <div class="donate-box">
         <h3>Make a Donation</h3>
         <p>All contributions support SDSI's applied research programs, satellite missions, and organizational operations.</p>
-        <a href="https://donate.stripe.com/5kQ8wO0YwfpyfRG541bfO03" target="_blank" class="btn-donate">Donate Now</a>
+        <stripe-buy-button
+          buy-button-id="buy_btn_1TanxVCGMMDiQAyZoJOqh7km"
+          publishable-key="pk_live_51T9ABMCGMMDiQAyZPEMzTOTNfbDHnTN24wlQnjvC04XMUexgRRV7CcukfzExua9ytvAgKquswtIUjKll0orlCEyR00VPE6v292"
+        ></stripe-buy-button>
         <p class="tax-note">SDSI is a 501(c)(3) public charity (EIN 39-2191995).<br>All donations are tax-deductible.</p>
       </div>
     </div>
