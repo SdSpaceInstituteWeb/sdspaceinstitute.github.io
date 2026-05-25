@@ -145,8 +145,8 @@
   /* FOUNDER LAYOUT */
   .founder-grid {
     display: grid;
-    grid-template-columns: 380px 1fr;
-    gap: 5rem;
+    grid-template-columns: 280px 1fr;
+    gap: 4rem;
     align-items: start;
   }
 
@@ -178,19 +178,19 @@
   .founder-name-overlay {
     position: absolute;
     bottom: 0; left: 0; right: 0;
-    padding: 2rem 1.8rem 1.6rem;
+    padding: 1.4rem 1.3rem 1.1rem;
     z-index: 1;
   }
   .founder-name-overlay h3 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 1.1rem;
+    font-size: 0.88rem;
     font-weight: 700;
     color: #fff;
     letter-spacing: 0.05em;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.25rem;
   }
   .founder-name-overlay span {
-    font-size: 0.82rem;
+    font-size: 0.72rem;
     color: var(--accent);
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -199,16 +199,16 @@
 
   /* CREDENTIALS BAR */
   .credentials-bar {
-    margin-top: 1.2rem;
+    margin-top: 0.9rem;
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 0.45rem;
   }
   .cred-item {
     display: flex;
     align-items: flex-start;
-    gap: 0.75rem;
-    padding: 0.7rem 1rem;
+    gap: 0.6rem;
+    padding: 0.5rem 0.75rem;
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 4px;
@@ -221,9 +221,9 @@
     flex-shrink: 0;
   }
   .cred-item p {
-    font-size: 0.82rem;
+    font-size: 0.74rem;
     color: var(--muted);
-    line-height: 1.5;
+    line-height: 1.45;
   }
   .cred-item strong {
     color: var(--text);
@@ -322,7 +322,7 @@
 
   @media (max-width: 900px) {
     .founder-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .founder-photo-wrap { position: static; max-width: 360px; }
+    .founder-photo-wrap { position: static; max-width: 280px; }
     .stats-row { grid-template-columns: repeat(3, 1fr); }
   }
   @media (max-width: 768px) {
