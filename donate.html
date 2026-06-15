@@ -46,7 +46,11 @@
   .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.4); }
   @media (max-width: 768px) { nav { padding: 1rem 1.5rem; } .nav-links { display: none; } footer { flex-direction: column; gap: 1rem; text-align: center; } }
 
-  .donate-grid { display: grid; grid-template-columns: 1fr 300px; gap: 4rem; align-items: start; }
+  .general-donation-banner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; background: var(--bg-alt); border: 1.5px solid var(--accent); border-radius: 12px; padding: 1.6rem 2rem; margin-bottom: 2rem; }
+  .general-donation-text h3 { font-family: 'Orbitron', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--accent); margin-bottom: 0.3rem; letter-spacing: 0.05em; }
+  .general-donation-text p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; margin: 0; }
+  .general-donation-tax { font-size: 0.75rem; color: var(--muted); margin-top: 0.4rem; }
+  @media (max-width: 768px) { .general-donation-banner { flex-direction: column; align-items: flex-start; } }
   .donate-text p { color: var(--muted); line-height: 1.85; margin-bottom: 1.2rem; font-size: 1.05rem; }
   .phase-cards { display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem; }
   .phase-card { border: 1px solid rgba(26,171,184,0.2); border-radius: 10px; padding: 1.3rem; background: var(--bg-alt); }
@@ -163,13 +167,22 @@
 
 <section>
   <div class="section-inner nav-offset">
-    <div class="donate-grid">
-      <div class="donate-text">
-        <p class="section-tag">Where It Goes</p>
-        <h2>What Your Donation Supports</h2>
-        <div class="divider"></div>
-        <p>Donations support the San Diego Space Institute (501(c)(3) public charity) and its applied aerospace research programs. Contributions are directed toward the Sentinel-Bio+ technology maturation ladder, a structured three-phase program that takes the mission from sensor development to flight-ready operations.</p>
-        <div class="phase-cards">
+    <div>
+      <p class="section-tag">Where It Goes</p>
+      <h2>What Your Donation Supports</h2>
+      <div class="divider"></div>
+      <p style="color:var(--muted); font-size:1.05rem; line-height:1.85; margin-bottom:2rem;">Donations support the San Diego Space Institute (501(c)(3) public charity) and its applied aerospace research programs. Contributions are directed toward the Sentinel-Bio+ technology maturation ladder, a structured three-phase program that takes the mission from sensor development to flight-ready operations.</p>
+
+      <div class="general-donation-banner">
+        <div class="general-donation-text">
+          <h3>General Donation</h3>
+          <p>Support SDSI's applied research programs broadly. Contributions are directed at the institute's discretion toward the areas of greatest need across all programs.</p>
+          <p class="general-donation-tax">SDSI is a 501(c)(3) public charity (EIN 39-2191995). All donations are tax-deductible.</p>
+        </div>
+        <a href="https://donate.stripe.com/5kQ8wO0YwfpyfRG541bfO03" target="_blank" class="btn btn-primary" style="white-space:nowrap;">Donate Now</a>
+      </div>
+
+      <div class="phase-cards">
           <div class="phase-card active-card">
             <div class="phase-card-header">
               <span class="phase-card-name">Phase 1A — Radiation Sensor Development</span>
@@ -225,23 +238,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="donate-box">
-        <p class="donate-box-title">General Donation</p>
-        <p class="donate-box-desc">Support SDSI's applied research programs broadly. Contributions are directed at the institute's discretion toward the areas of greatest need across all programs.</p>
-        <stripe-buy-button
-          buy-button-id="buy_btn_1TanxVCGMMDiQAyZoJOqh7km"
-          publishable-key="pk_live_51T9ABMCGMMDiQAyZPEMzTOTNfbDHnTN24wlQnjvC04XMUexgRRV7CcukfzExua9ytvAgKquswtIUjKll0orlCEyR00VPE6v292"
-        ></stripe-buy-button>
-        <p class="tax-note">SDSI is a 501(c)(3) public charity (EIN 39-2191995).<br>All donations are tax-deductible.</p>
-        <p class="why-heading">Why Your Support Matters</p>
-        <ul class="why-list">
-          <li>Funds student engineers building real flight hardware</li>
-          <li>Supports space radiation monitoring that protects GPS and defense systems</li>
-          <li>Advances Sentinel-Bio+ toward a constellation launch</li>
-          <li>Builds San Diego's next generation of aerospace talent</li>
-        </ul>
-      </div>
     </div>
   </div>
 </section>
