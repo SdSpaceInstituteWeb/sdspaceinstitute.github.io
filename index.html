@@ -156,34 +156,41 @@
   .impact-two-col { display: grid; grid-template-columns: 1fr auto; gap: 5rem; align-items: start; }
   .impact-text { max-width: 620px; }
 
-  /* ROCKET TRACKER */
-  .rocket-tracker { display: flex; flex-direction: column; align-items: center; gap: 1.4rem; flex-shrink: 0; }
-  .rocket-tracker-inner { position: relative; display: flex; align-items: flex-end; gap: 0; height: 280px; }
+  /* GOAL CARD */
+  .goal-card { background: var(--bg-alt); border: 1px solid rgba(26,171,184,0.18); border-radius: 12px; padding: 1.6rem; width: 300px; flex-shrink: 0; }
+  .phase-badge { display: inline-block; background: var(--accent); color: #fff; font-size: 0.62rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; margin-bottom: 0.9rem; }
+  .goal-card-title { font-family: 'Orbitron', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--text); margin: 0 0 0.25rem; }
+  .goal-card-sub { font-size: 0.76rem; color: var(--muted); margin: 0 0 1.1rem; line-height: 1.5; }
+  .goal-amounts { display: flex; gap: 1.5rem; margin-bottom: 1.2rem; padding-bottom: 1.1rem; border-bottom: 1px solid rgba(13,43,53,0.08); }
+  .goal-amount-block { display: flex; flex-direction: column; gap: 3px; }
+  .goal-amount-label { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
+  .goal-amount-value { font-family: 'Orbitron', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--accent); }
+  .goal-amount-value.goal-total { color: var(--text); font-size: 1.05rem; }
+  .funds-label { font-size: 0.66rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin: 0 0 0.5rem; }
+  .funds-list { list-style: none; padding: 0; margin: 0 0 1.1rem; }
+  .funds-list li { font-size: 0.78rem; color: var(--text); padding: 0.28rem 0; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid rgba(13,43,53,0.06); }
+  .funds-list li:last-child { border-bottom: none; }
+  .funds-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+  .phase-ladder { border-top: 1px solid rgba(13,43,53,0.08); padding-top: 0.9rem; margin-top: 0.1rem; }
+  .ladder-label { font-size: 0.66rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
+  .ladder-steps { display: flex; align-items: stretch; }
+  .ladder-step { flex: 1; padding: 0.45rem 0.35rem; border-radius: 4px; text-align: center; }
+  .ladder-step.active { background: var(--accent); }
+  .ladder-step.inactive { background: rgba(26,171,184,0.08); border: 1px solid rgba(26,171,184,0.15); }
+  .ladder-step-name { font-size: 0.58rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+  .ladder-step.active .ladder-step-name { color: #fff; }
+  .ladder-step.inactive .ladder-step-name { color: var(--muted); }
+  .ladder-step-amt { font-size: 0.65rem; font-weight: 700; margin-top: 2px; }
+  .ladder-step.active .ladder-step-amt { color: rgba(255,255,255,0.85); }
+  .ladder-step.inactive .ladder-step-amt { color: var(--text); }
+  .ladder-arrow { display: flex; align-items: center; padding: 0 2px; color: var(--accent); font-size: 9px; }
+  .mission-points { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
+  .mission-point { display: flex; gap: 12px; align-items: flex-start; }
+  .mission-icon { width: 32px; height: 32px; border-radius: 8px; background: rgba(26,171,184,0.1); border: 1px solid rgba(26,171,184,0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; font-size: 15px; color: var(--accent); }
+  .mission-point-text h4 { font-size: 0.84rem; font-weight: 600; color: var(--text); margin: 0 0 3px; }
+  .mission-point-text p { font-size: 0.8rem; color: var(--muted); margin: 0; line-height: 1.65; }
 
-  /* milestones */
-  .rocket-milestones { position: relative; width: 80px; height: 100%; }
-  .rocket-milestone { position: absolute; right: 0; display: flex; align-items: center; gap: 0; transform: translateY(50%); }
-  .milestone-dash { display: block; width: 28px; height: 1px; border-top: 1.5px dashed var(--gold); opacity: 0.7; }
-  .milestone-label { font-family: 'Orbitron', sans-serif; font-size: 0.6rem; color: var(--gold); letter-spacing: 0.08em; padding-left: 6px; white-space: nowrap; }
-
-  /* tube */
-  .rocket-column { position: relative; display: flex; flex-direction: column; align-items: center; height: 100%; width: 38px; }
-  .launch-pad { width: 38px; height: 6px; background: linear-gradient(90deg, var(--accent), var(--gold)); border-radius: 3px; flex-shrink: 0; box-shadow: 0 0 10px rgba(26,171,184,0.4); }
-  .rocket-tube { position: relative; width: 10px; flex: 1; background: rgba(26,171,184,0.12); border-radius: 5px; border: 1px solid rgba(26,171,184,0.25); overflow: visible; margin-bottom: 4px; }
-  .rocket-fill { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(180deg, var(--accent) 0%, rgba(26,171,184,0.4) 100%); border-radius: 5px; transition: height 1.2s cubic-bezier(0.4,0,0.2,1); }
-  .tube-tick { position: absolute; left: -4px; right: -4px; height: 1.5px; background: var(--gold); opacity: 0.5; border-radius: 1px; transform: translateY(50%); }
-
-  /* rocket ship */
-  .rocket-ship { position: absolute; left: 50%; transform: translateX(-50%) translateY(50%); transition: bottom 1.2s cubic-bezier(0.4,0,0.2,1); filter: drop-shadow(0 2px 8px rgba(26,171,184,0.4)); }
-
-  /* footer */
-  .rocket-footer { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; text-align: center; }
-  .rocket-raised { font-size: 0.82rem; color: var(--muted); letter-spacing: 0.03em; }
-  .rocket-raised strong { color: var(--accent); font-family: 'Orbitron', sans-serif; font-size: 0.9rem; }
-  .rocket-raised span { color: var(--muted); opacity: 0.7; }
-  .rocket-donate { font-size: 0.8rem; padding: 0.65rem 1.6rem; }
-
-  @media (max-width: 768px) { .impact-two-col { grid-template-columns: 1fr; gap: 3rem; } .rocket-tracker { width: 100%; } }
+  @media (max-width: 768px) { .impact-two-col { grid-template-columns: 1fr; gap: 3rem; } .goal-card { width: 100%; } }
 
   /* HERO */
   #home {
@@ -389,77 +396,75 @@
         <p class="section-tag">Why It Matters</p>
         <h2>What We Are Working to Achieve</h2>
         <div class="divider"></div>
-        <p style="color:var(--muted); font-size:1.05rem; line-height:1.85;">Space radiation is one of the least monitored threats in low Earth orbit. It degrades satellites, disrupts GPS, threatens astronauts, and costs the defense and communications industries billions. SDSI is building Sentinel-Bio+, a constellation of student-built CubeSats that continuously measures radiation and atmospheric drag, producing the persistent operational data that satellite operators, insurers, and government agencies need to manage risk.</p>
-      </div>
-
-      <!-- RIGHT: rocket fundraising tracker -->
-      <div class="rocket-tracker">
-        <div class="rocket-tracker-inner">
-
-          <!-- milestone labels (right side) -->
-          <div class="rocket-milestones">
-            <div class="rocket-milestone" style="bottom: 72%;">
-              <span class="milestone-dash"></span>
-              <span class="milestone-label">TBD</span>
-            </div>
-            <div class="rocket-milestone" style="bottom: 44%;">
-              <span class="milestone-dash"></span>
-              <span class="milestone-label">TBD</span>
-            </div>
-            <div class="rocket-milestone" style="bottom: 16%;">
-              <span class="milestone-dash"></span>
-              <span class="milestone-label">TBD</span>
+        <p style="color:var(--muted); font-size:1.05rem; line-height:1.85;">Space radiation is one of the least monitored threats in low Earth orbit. It degrades satellites, disrupts GPS, threatens astronauts, and costs the defense and communications industries billions. SDSI is building Sentinel-Bio+, a constellation of student-built CubeSats that continuously measures radiation and atmospheric drag. Satellite operators, insurers, and government agencies need this persistent data to manage risk.</p>
+        <div class="mission-points">
+          <div class="mission-point">
+            <div class="mission-icon">&#9881;</div>
+            <div class="mission-point-text">
+              <h4>Phase 1A starts with the sensor</h4>
+              <p>Phase 1A funds the engineering units, electronics, and lab testing that take our radiation sensor from concept to demonstrated hardware.</p>
             </div>
           </div>
-
-          <!-- rocket column -->
-          <div class="rocket-column">
-
-            <!-- launch pad -->
-            <div class="launch-pad"></div>
-
-            <!-- tube track -->
-            <div class="rocket-tube">
-              <!-- fill (0% until goals are set) -->
-              <div class="rocket-fill" style="height: 0%;"></div>
-              <!-- milestone tick marks on tube -->
-              <div class="tube-tick" style="bottom: 72%;"></div>
-              <div class="tube-tick" style="bottom: 44%;"></div>
-              <div class="tube-tick" style="bottom: 16%;"></div>
+          <div class="mission-point">
+            <div class="mission-icon">&#8599;</div>
+            <div class="mission-point-text">
+              <h4>Each phase unlocks the next</h4>
+              <p>Phase 1A ($6,500) leads to the magnetometer suite in Phase 1B ($20,500), then to a full FlatSat operations testbed in Phase 2 ($70,000). A clear ladder from lab hardware to flight-ready systems.</p>
             </div>
-
-            <!-- rocket SVG -->
-            <div class="rocket-ship" style="bottom: 0%;">
-              <svg width="38" height="72" viewBox="0 0 38 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- body -->
-                <path d="M19 2 C10 12 7 28 7 42 L31 42 C31 28 28 12 19 2Z" fill="#1AABB8"/>
-                <!-- window -->
-                <circle cx="19" cy="26" r="5" fill="white" opacity="0.9"/>
-                <circle cx="19" cy="26" r="3" fill="#1AABB8" opacity="0.5"/>
-                <!-- fins left -->
-                <path d="M7 42 L2 56 L10 50 L7 42Z" fill="#C08000"/>
-                <!-- fins right -->
-                <path d="M31 42 L36 56 L28 50 L31 42Z" fill="#C08000"/>
-                <!-- base -->
-                <rect x="10" y="42" width="18" height="5" rx="1" fill="#0D8090"/>
-                <!-- exhaust glow -->
-                <ellipse cx="19" cy="49" rx="6" ry="3" fill="#C08000" opacity="0.35"/>
-                <!-- nose tip accent -->
-                <circle cx="19" cy="4" r="2" fill="white" opacity="0.6"/>
-              </svg>
+          </div>
+          <div class="mission-point">
+            <div class="mission-icon">&#127979;</div>
+            <div class="mission-point-text">
+              <h4>Students build real flight hardware</h4>
+              <p>Student engineers at SDSU and SJSU work through NASA-style design reviews, building and testing real hardware and gaining the documented systems engineering experience aerospace employers value.</p>
             </div>
-
-          </div><!-- /rocket-column -->
-
-        </div><!-- /rocket-tracker-inner -->
-
-        <!-- counter + CTA -->
-        <div class="rocket-footer">
-          <p class="rocket-raised">Total raised: <strong>$0</strong> <span>of TBD goal</span></p>
-          <a href="https://donate.stripe.com/5kQ8wO0YwfpyfRG541bfO03" target="_blank" class="btn btn-primary rocket-donate">Donate Now</a>
+          </div>
         </div>
+      </div>
 
-      </div><!-- /rocket-tracker -->
+      <!-- RIGHT: Phase 1A goal card -->
+      <div class="goal-card">
+        <div class="phase-badge">Phase 1A — Active</div>
+        <p class="goal-card-title">Radiation Sensor Development</p>
+        <p class="goal-card-sub">Fund the primary science sensor for Sentinel-Bio+</p>
+        <div class="goal-amounts">
+          <div class="goal-amount-block">
+            <span class="goal-amount-label">Raised</span>
+            <span class="goal-amount-value">$0</span>
+          </div>
+          <div class="goal-amount-block">
+            <span class="goal-amount-label">Goal</span>
+            <span class="goal-amount-value goal-total">$6,500</span>
+          </div>
+        </div>
+        <p class="funds-label">Your gift funds</p>
+        <ul class="funds-list">
+          <li><span class="funds-dot"></span>Radiation detector engineering units</li>
+          <li><span class="funds-dot"></span>Detector &amp; preamplifier electronics</li>
+          <li><span class="funds-dot"></span>Printed circuit board fabrication</li>
+          <li><span class="funds-dot"></span>Laboratory testing &amp; integration</li>
+        </ul>
+        <a href="https://donate.stripe.com/5kQ8wO0YwfpyfRG541bfO03" target="_blank" class="btn btn-primary" style="display:block;text-align:center;margin-bottom:1.1rem;">Donate Now</a>
+        <div class="phase-ladder">
+          <p class="ladder-label">Technology maturation ladder</p>
+          <div class="ladder-steps">
+            <div class="ladder-step active">
+              <div class="ladder-step-name">Phase 1A</div>
+              <div class="ladder-step-amt">$6,500</div>
+            </div>
+            <div class="ladder-arrow">&#8250;</div>
+            <div class="ladder-step inactive">
+              <div class="ladder-step-name">Phase 1B</div>
+              <div class="ladder-step-amt">$20,500</div>
+            </div>
+            <div class="ladder-arrow">&#8250;</div>
+            <div class="ladder-step inactive">
+              <div class="ladder-step-name">Phase 2</div>
+              <div class="ladder-step-amt">$70,000</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div><!-- /impact-two-col -->
   </div>
