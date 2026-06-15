@@ -46,26 +46,38 @@
   .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.4); }
   @media (max-width: 768px) { nav { padding: 1rem 1.5rem; } .nav-links { display: none; } footer { flex-direction: column; gap: 1rem; text-align: center; } }
 
-  .donate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+  .donate-grid { display: grid; grid-template-columns: 1fr 300px; gap: 4rem; align-items: start; }
   .donate-text p { color: var(--muted); line-height: 1.85; margin-bottom: 1.2rem; font-size: 1.05rem; }
-  .fund-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
-  .fund-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.4rem; }
-  .fund-card h4 { font-family: 'Orbitron', sans-serif; font-size: 0.78rem; color: var(--text); margin-bottom: 0.5rem; letter-spacing: 0.04em; }
-  .fund-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
-  .fund-amount { font-family: 'Orbitron', sans-serif; font-size: 1.1rem; color: var(--gold); font-weight: 700; margin-bottom: 0.4rem; display: block; }
-  .donate-box { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem; box-shadow: var(--shadow); position: sticky; top: 7rem; }
-  .donate-box h3 { font-family: 'Orbitron', sans-serif; font-size: 1rem; color: var(--accent); margin-bottom: 1rem; letter-spacing: 0.05em; }
-  .donate-box p { color: var(--muted); font-size: 0.92rem; line-height: 1.7; margin-bottom: 1.5rem; }
-  .btn-donate { width: 100%; padding: 1rem; background: var(--accent); color: #fff; border: none; border-radius: 6px; font-family: 'Orbitron', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em; cursor: pointer; transition: all 0.2s; text-decoration: none; display: block; text-align: center; }
-  .btn-donate:hover { background: var(--accent-dark); transform: translateY(-2px); }
-  .tax-note { font-size: 0.78rem; color: var(--muted); text-align: center; margin-top: 1rem; line-height: 1.5; }
-  .why-heading { font-family: 'Orbitron', sans-serif; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; margin-top: 0.25rem; }
-  .why-list { list-style: none; padding: 0; margin: 0 0 1.5rem; }
-  .why-list li { color: var(--text); font-size: 0.9rem; line-height: 1.6; padding: 0.35rem 0 0.35rem 1.4rem; position: relative; border-bottom: 1px solid var(--border); }
+  .phase-cards { display: flex; flex-direction: column; gap: 1rem; margin-top: 0.5rem; }
+  .phase-card { border: 1px solid rgba(26,171,184,0.2); border-radius: 10px; padding: 1.3rem; background: var(--bg-alt); }
+  .phase-card.active-card { border-color: var(--accent); border-width: 1.5px; background: #fff; }
+  .phase-card-header { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin-bottom: 0.6rem; }
+  .phase-card-name { font-family: 'Orbitron', sans-serif; font-size: 0.78rem; font-weight: 700; color: var(--text); }
+  .phase-active-badge { background: var(--accent); color: #fff; font-size: 0.6rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px; border-radius: 3px; flex-shrink: 0; }
+  .phase-next-badge { background: rgba(26,171,184,0.1); color: var(--muted); font-size: 0.6rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px; border-radius: 3px; border: 1px solid rgba(26,171,184,0.2); flex-shrink: 0; }
+  .phase-card-goal { font-family: 'Orbitron', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--accent); margin-bottom: 0.4rem; }
+  .phase-card.inactive-card .phase-card-goal { color: var(--text); }
+  .phase-card-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; margin-bottom: 0.7rem; }
+  .phase-items { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+  .phase-item { font-size: 0.7rem; color: var(--muted); background: rgba(26,171,184,0.08); border: 1px solid rgba(26,171,184,0.15); border-radius: 3px; padding: 3px 8px; }
+  .phase-card.active-card .phase-item { background: rgba(26,171,184,0.1); border-color: rgba(26,171,184,0.25); color: var(--text); }
+  .phase-amounts { display: flex; gap: 1.2rem; margin-bottom: 0.9rem; padding-top: 0.8rem; border-top: 1px solid rgba(26,171,184,0.12); }
+  .phase-amount-block { display: flex; flex-direction: column; gap: 2px; }
+  .phase-amount-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
+  .phase-amount-value { font-family: 'Orbitron', sans-serif; font-size: 1rem; font-weight: 700; color: var(--accent); }
+  .phase-amount-value.total { color: var(--text); font-size: 0.88rem; }
+  .btn-phase { display: block; width: 100%; background: var(--accent); color: #fff; text-align: center; padding: 0.75rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; box-sizing: border-box; transition: background 0.2s; }
+  .btn-phase:hover { background: var(--accent-dark); }
+  .donate-box { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 2rem; box-shadow: var(--shadow); position: sticky; top: 7rem; }
+  .donate-box-title { font-family: 'Orbitron', sans-serif; font-size: 0.95rem; color: var(--accent); margin-bottom: 0.4rem; font-weight: 700; letter-spacing: 0.05em; }
+  .donate-box-desc { color: var(--muted); font-size: 0.88rem; line-height: 1.7; margin-bottom: 1.2rem; }
+  .tax-note { font-size: 0.78rem; color: var(--muted); text-align: center; margin: 1rem 0; line-height: 1.5; }
+  .why-heading { font-family: 'Orbitron', sans-serif; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+  .why-list { list-style: none; padding: 0; margin: 0; }
+  .why-list li { color: var(--text); font-size: 0.88rem; line-height: 1.6; padding: 0.35rem 0 0.35rem 1.4rem; position: relative; border-bottom: 1px solid var(--border); }
   .why-list li:last-child { border-bottom: none; }
   .why-list li::before { content: '›'; position: absolute; left: 0; color: var(--accent); font-size: 1rem; font-weight: 700; line-height: 1.6; }
-  #alt { background: var(--bg-alt); }
-  @media (max-width: 768px) { .donate-grid, .fund-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 768px) { .donate-grid { grid-template-columns: 1fr; } }
 
   .hamburger {
     display: none;
@@ -156,35 +168,67 @@
         <p class="section-tag">Where It Goes</p>
         <h2>What Your Donation Supports</h2>
         <div class="divider"></div>
-        <p>Donations support the San Diego Space Institute (501(c)(3) public charity) and its applied aerospace research programs and applied satellite research missions.</p>
-        <p>Contributions are directed at the discretion of the institute toward the areas of greatest need, which currently include the following priorities:</p>
-        <div class="fund-grid">
-          <div class="fund-card">
-            <h4>Student Scholarships</h4>
-            <span class="fund-amount">TBD</span>
-            <p>Covers materials, program fees, and engineering costs for students actively building Sentinel-Bio+ flight hardware.</p>
+        <p>Donations support the San Diego Space Institute (501(c)(3) public charity) and its applied aerospace research programs. Contributions are directed toward the Sentinel-Bio+ technology maturation ladder, a structured three-phase program that takes the mission from sensor development to flight-ready operations.</p>
+        <div class="phase-cards">
+          <div class="phase-card active-card">
+            <div class="phase-card-header">
+              <span class="phase-card-name">Phase 1A — Radiation Sensor Development</span>
+              <span class="phase-active-badge">Active</span>
+            </div>
+            <div class="phase-card-goal">$6,500</div>
+            <p class="phase-card-desc">Matures radiation detector engineering units and associated electronics so the payload can advance from concept-level design toward laboratory-demonstrated sensor performance.</p>
+            <div class="phase-items">
+              <span class="phase-item">Radiation detector units</span>
+              <span class="phase-item">Detector electronics</span>
+              <span class="phase-item">Preamplifier development</span>
+              <span class="phase-item">PCB fabrication</span>
+              <span class="phase-item">Laboratory testing</span>
+            </div>
+            <div class="phase-amounts">
+              <div class="phase-amount-block">
+                <span class="phase-amount-label">Raised</span>
+                <span class="phase-amount-value">$0</span>
+              </div>
+              <div class="phase-amount-block">
+                <span class="phase-amount-label">Goal</span>
+                <span class="phase-amount-value total">$6,500</span>
+              </div>
+            </div>
+            <a href="https://donate.stripe.com/bJe4gybDafpybBq2VTbfO05" target="_blank" class="btn-phase">Donate to Phase 1A</a>
           </div>
-          <div class="fund-card">
-            <h4>Hardware & Equipment</h4>
-            <span class="fund-amount">TBD</span>
-            <p>Funds the satellite components, lab tools, and testing equipment students use to build and qualify real flight hardware.</p>
+          <div class="phase-card inactive-card">
+            <div class="phase-card-header">
+              <span class="phase-card-name">Phase 1B — Magnetometer and Sensor Lab</span>
+              <span class="phase-next-badge">Up Next</span>
+            </div>
+            <div class="phase-card-goal">$20,500</div>
+            <p class="phase-card-desc">Develops a two-channel fluxgate magnetometer and reusable SDSI sensor laboratory, bridging individual sensor development and system-level FlatSat operations.</p>
+            <div class="phase-items">
+              <span class="phase-item">Fluxgate magnetometer</span>
+              <span class="phase-item">Drive electronics</span>
+              <span class="phase-item">Helmholtz coil calibration</span>
+              <span class="phase-item">Data acquisition</span>
+            </div>
           </div>
-          <div class="fund-card">
-            <h4>Launch & Operations</h4>
-            <span class="fund-amount">TBD</span>
-            <p>Covers rideshare launch costs and mission operations for the Sentinel-Bio+ constellation launching in 2028.</p>
-          </div>
-          <div class="fund-card">
-            <h4>Organizational Programs</h4>
-            <span class="fund-amount">TBD</span>
-            <p>Supports SDSI's partnerships, university collaborations, and long-term mission development across San Diego.</p>
+          <div class="phase-card inactive-card">
+            <div class="phase-card-header">
+              <span class="phase-card-name">Phase 2 — Remote Operations and FlatSat</span>
+              <span class="phase-next-badge">Future</span>
+            </div>
+            <div class="phase-card-goal">$70,000</div>
+            <p class="phase-card-desc">Converts existing design and prototype work into a distributed remote operations capability using Phase 1A and 1B sensors within a FlatSat constellation testbed.</p>
+            <div class="phase-items">
+              <span class="phase-item">FlatSat constellation</span>
+              <span class="phase-item">Iridium communications</span>
+              <span class="phase-item">Remote operations</span>
+              <span class="phase-item">Mission rehearsal</span>
+            </div>
           </div>
         </div>
-        <p style="font-size:0.88rem; color:var(--muted); line-height:1.7;">Specific funding goals will be updated as the program progresses. Check back for updates or <a href="contact.html" style="color:var(--accent);">contact us</a> for more information.</p>
       </div>
       <div class="donate-box">
-        <h3>Make a Donation</h3>
-        <p>All contributions support SDSI's applied research programs, satellite missions, and organizational operations.</p>
+        <p class="donate-box-title">General Donation</p>
+        <p class="donate-box-desc">Support SDSI's applied research programs broadly. Contributions are directed at the institute's discretion toward the areas of greatest need across all programs.</p>
         <stripe-buy-button
           buy-button-id="buy_btn_1TanxVCGMMDiQAyZoJOqh7km"
           publishable-key="pk_live_51T9ABMCGMMDiQAyZPEMzTOTNfbDHnTN24wlQnjvC04XMUexgRRV7CcukfzExua9ytvAgKquswtIUjKll0orlCEyR00VPE6v292"
@@ -194,7 +238,7 @@
         <ul class="why-list">
           <li>Funds student engineers building real flight hardware</li>
           <li>Supports space radiation monitoring that protects GPS and defense systems</li>
-          <li>Keeps Sentinel-Bio+ on track for a 2028 constellation launch</li>
+          <li>Advances Sentinel-Bio+ toward a constellation launch</li>
           <li>Builds San Diego's next generation of aerospace talent</li>
         </ul>
       </div>
