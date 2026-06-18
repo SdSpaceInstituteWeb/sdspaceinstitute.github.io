@@ -268,6 +268,7 @@
   .goal-bar-bg { background: var(--border); border-radius: 100px; height: 6px; margin-bottom: 0.8rem; }
   .goal-bar { background: linear-gradient(90deg, var(--accent), var(--gold)); border-radius: 100px; height: 6px; }
   .goal-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+  .mission-timeline { display:flex; align-items:flex-start; margin-bottom:3rem; overflow-x:auto; padding-bottom:0.5rem; }
   /* PARTNERS */
   #partners { background: var(--bg-alt); }
   .partners-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; }
@@ -380,7 +381,7 @@
   <div class="hero-orbit hero-orbit-2"></div>
   <p class="hero-tag"> San Diego Space Institute</p>
   <h1>Design. Build. Test. <span>Launch.</span></h1>
-  <p class="hero-sub">Space radiation threatens every satellite in orbit. SDSI is building the monitoring infrastructure to measure it, through student-built CubeSats that give the next generation of aerospace engineers real flight hardware experience.</p>
+  <p class="hero-sub">Space radiation threatens every satellite in orbit. SDSI is building the monitoring infrastructure to measure it, through University-built CubeSats that give the next generation of aerospace engineers real flight hardware experience.</p>
   <div class="btn-group">
     <a href="https://donate.stripe.com/5kQ8wO0YwfpyfRG541bfO03" target="_self" class="btn btn-primary">Donate Now</a>
     <a href="mission.html" class="btn btn-outline">Current Mission</a>
@@ -389,14 +390,83 @@
 
 <section id="impact">
   <div class="section-inner">
+    <p class="section-tag">Current Mission</p>
+    <h2>Support What's Launching Next</h2>
+    <div class="divider"></div>
+
+    <div class="mission-timeline">
+
+      <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;min-width:66px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.9rem;">&#10003;</div>
+        <div style="margin-top:8px;text-align:center;">
+          <div style="font-size:0.65rem;font-weight:600;color:var(--text);line-height:1.3;">NASA Grant</div>
+          <div style="font-size:0.6rem;color:var(--accent);margin-top:2px;font-weight:500;">Received</div>
+        </div>
+      </div>
+
+      <div style="flex:1;height:2px;background:var(--accent);min-width:16px;margin-top:16px;"></div>
+
+      <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;min-width:66px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.9rem;">&#10003;</div>
+        <div style="margin-top:8px;text-align:center;">
+          <div style="font-size:0.65rem;font-weight:600;color:var(--text);line-height:1.3;">PRD</div>
+          <div style="font-size:0.6rem;color:var(--accent);margin-top:2px;font-weight:500;">Approved</div>
+        </div>
+      </div>
+
+      <div style="flex:1;height:2px;background:var(--accent);min-width:16px;margin-top:16px;"></div>
+
+      <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;min-width:66px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.9rem;">&#10003;</div>
+        <div style="margin-top:8px;text-align:center;">
+          <div style="font-size:0.65rem;font-weight:600;color:var(--text);line-height:1.3;">CRD</div>
+          <div style="font-size:0.6rem;color:var(--accent);margin-top:2px;font-weight:500;">Complete</div>
+        </div>
+      </div>
+
+      <div style="flex:1;height:2px;background:var(--accent);min-width:16px;margin-top:16px;"></div>
+
+      <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;min-width:88px;">
+        <div style="position:relative;width:50px;height:50px;display:flex;align-items:center;justify-content:center;">
+          <div style="position:absolute;inset:0;border-radius:50%;border:2px solid var(--accent);opacity:0.4;"></div>
+          <div style="width:38px;height:38px;border-radius:50%;background:var(--accent);border:2px solid var(--accent-dark);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;">&#10022;</div>
+        </div>
+        <div style="margin-top:10px;text-align:center;">
+          <span style="font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#fff;background:var(--accent);padding:2px 8px;border-radius:3px;display:inline-block;margin-bottom:4px;">Active</span>
+          <div style="font-size:0.66rem;font-weight:700;color:var(--text);line-height:1.3;max-width:100px;">Fund the Radiation Sensor</div>
+          <div style="font-size:0.62rem;color:var(--gold);font-weight:600;margin-top:3px;">$6,500 goal</div>
+        </div>
+      </div>
+
+      <div style="flex:1;height:0;border-top:2px dashed rgba(26,171,184,0.3);min-width:16px;margin-top:25px;"></div>
+
+      <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;min-width:80px;opacity:0.5;">
+        <div style="width:32px;height:32px;border-radius:50%;border:2px solid rgba(13,43,53,0.2);background:var(--bg-alt);"></div>
+        <div style="margin-top:8px;text-align:center;">
+          <div style="font-size:0.6rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);">Phase 1B</div>
+          <div style="font-size:0.63rem;color:var(--muted);line-height:1.3;max-width:90px;margin-top:2px;">Fund the Magnetometer Suite</div>
+          <div style="font-size:0.6rem;color:#888;margin-top:2px;">$20,500</div>
+        </div>
+      </div>
+
+      <div style="flex:1;height:0;border-top:2px dashed rgba(13,43,53,0.12);min-width:16px;margin-top:16px;"></div>
+
+      <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;min-width:80px;opacity:0.4;">
+        <div style="width:32px;height:32px;border-radius:50%;border:2px solid rgba(13,43,53,0.15);background:var(--bg-alt);"></div>
+        <div style="margin-top:8px;text-align:center;">
+          <div style="font-size:0.6rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#888;">Phase 2</div>
+          <div style="font-size:0.63rem;color:#888;line-height:1.3;max-width:90px;margin-top:2px;">Fund the Full FlatSat Testbed</div>
+          <div style="font-size:0.6rem;color:#aaa;margin-top:2px;">$70,000</div>
+        </div>
+      </div>
+
+    </div>
+
     <div class="impact-two-col">
 
       <!-- LEFT: text -->
       <div class="impact-text">
-        <p class="section-tag">Why It Matters</p>
-        <h2>What We Are Working to Achieve</h2>
-        <div class="divider"></div>
-        <p style="color:var(--muted); font-size:1.05rem; line-height:1.85;">Space radiation is one of the least monitored threats in low Earth orbit. It degrades satellites, disrupts GPS, threatens astronauts, and costs the defense and communications industries billions. SDSI is building Sentinel-Bio+, a constellation of student-built CubeSats that continuously measures radiation and atmospheric drag. Satellite operators, insurers, and government agencies need this persistent data to manage risk.</p>
+        <p style="color:var(--muted); font-size:1.05rem; line-height:1.85;">Space radiation is one of the least monitored threats in low Earth orbit. It degrades satellites, disrupts GPS, threatens astronauts, and costs the defense and communications industries billions. SDSI is building Sentinel-Bio+, a constellation of University-built CubeSats that continuously measures radiation and atmospheric drag. Satellite operators, insurers, and government agencies need this persistent data to manage risk.</p>
         <div class="mission-points">
           <div class="mission-point">
             <div class="mission-icon">&#9881;</div>
@@ -425,7 +495,7 @@
       <!-- RIGHT: Phase 1A goal card -->
       <div class="goal-card">
         <div class="phase-badge">Phase 1A — Active</div>
-        <p class="goal-card-title">Radiation Sensor Development</p>
+        <p class="goal-card-title">Fund the Radiation Sensor</p>
         <p class="goal-card-sub">Fund the primary science sensor for Sentinel-Bio+</p>
         <div class="goal-amounts">
           <div class="goal-amount-block">
