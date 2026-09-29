@@ -247,8 +247,17 @@
   .hero-tag { font-family: 'Orbitron', sans-serif; font-size: 0.68rem; letter-spacing: 0.3em; color: var(--gold); text-transform: uppercase; margin-bottom: 1.5rem; }
   h1 { font-family: 'Orbitron', sans-serif; font-size: clamp(2.2rem, 5.5vw, 4.5rem); font-weight: 900; line-height: 1.1; color: var(--text); margin-bottom: 1.5rem; }
   h1 span { color: var(--accent); }
-  .hero-sub { font-size: 1.15rem; color: var(--muted); max-width: 600px; line-height: 1.75; margin-bottom: 2.5rem; }
+  .hero-sub { font-size: 1.15rem; color: var(--muted); max-width: 600px; line-height: 1.75; margin-bottom: 2rem; }
   .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; position: relative; z-index: 2; }
+  /* DONOR TIER SQUARES */
+  .tier-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.6rem; width: 100%; max-width: 700px; margin-bottom: 2rem; position: relative; z-index: 2; }
+  .tier-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; padding: 0.75rem 0.5rem; text-align: center; cursor: default; user-select: none; }
+  .tier-card.highlight { border-color: var(--accent); background: rgba(26,171,184,0.12); }
+  .tier-popular { display: inline-block; font-size: 0.48rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); background: rgba(26,171,184,0.15); border: 1px solid rgba(26,171,184,0.3); border-radius: 3px; padding: 2px 5px; margin-bottom: 0.3rem; }
+  .tier-name { font-family: 'Orbitron', sans-serif; font-size: 0.55rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.9); margin-bottom: 0.25rem; line-height: 1.3; }
+  .tier-amount { font-family: 'Orbitron', sans-serif; font-size: 0.8rem; font-weight: 700; color: var(--gold); line-height: 1.2; }
+  @media (max-width: 700px) { .tier-grid { grid-template-columns: repeat(3, 1fr); max-width: 400px; } }
+  @media (max-width: 480px) { .tier-grid { grid-template-columns: repeat(2, 1fr); max-width: 300px; gap: 0.5rem; } .tier-card { padding: 0.6rem 0.4rem; } }
   /* MISSION SNAPSHOT */
   #mission-snap { background: var(--bg-alt); }
   .snap-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
@@ -381,7 +390,30 @@
   <div class="hero-orbit hero-orbit-2"></div>
   <p class="hero-tag"> San Diego Space Institute</p>
   <h1>Design. Build. Test. <span>Launch.</span></h1>
-  <p class="hero-sub">Stage 1 is live. We are raising $25,000 to carry P3 PRELUDE from the California Space Grant award to a completed sensor design review. Every contribution counts — your support funds the engineering team, prototype hardware, and design work that take this radiation sensor from concept to documented flight evidence.</p>
+  <p class="hero-sub">Stage 1 is live. We are raising $40,000 to carry P3 PRELUDE from the California Space Grant award to a completed sensor design review. Join the crew at any level, from Cadet at $25 to Flight Director at $1,000+. Your support funds the engineering team, prototype hardware, and design work that take this radiation sensor from concept to documented flight evidence.</p>
+  <div class="tier-grid">
+    <div class="tier-card">
+      <div class="tier-name">Cadet</div>
+      <div class="tier-amount">$25</div>
+    </div>
+    <div class="tier-card">
+      <div class="tier-name">Engineer</div>
+      <div class="tier-amount">$50</div>
+    </div>
+    <div class="tier-card highlight">
+      <div class="tier-popular">Most popular</div>
+      <div class="tier-name">Pilot</div>
+      <div class="tier-amount">$100</div>
+    </div>
+    <div class="tier-card">
+      <div class="tier-name">Astronaut</div>
+      <div class="tier-amount">$500</div>
+    </div>
+    <div class="tier-card">
+      <div class="tier-name">Flight Director</div>
+      <div class="tier-amount">$1,000+</div>
+    </div>
+  </div>
   <div class="btn-group">
     <a href="https://donate.stripe.com/bJe4gybDafpybBq2VTbfO05" target="_blank" class="btn btn-primary">Donate Now</a>
   </div>
@@ -423,7 +455,7 @@
         <div style="margin-top:10px;text-align:center;">
           <span style="font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#fff;background:var(--accent);padding:2px 8px;border-radius:3px;display:inline-block;margin-bottom:4px;">Active</span>
           <div style="font-size:0.66rem;font-weight:700;color:var(--text);line-height:1.3;max-width:100px;">Build and Prove the Sensor</div>
-          <div style="font-size:0.62rem;color:var(--gold);font-weight:600;margin-top:3px;">$25,000</div>
+          <div style="font-size:0.62rem;color:var(--gold);font-weight:600;margin-top:3px;">$40,000</div>
         </div>
       </div>
 
@@ -478,7 +510,7 @@
           <div class="mission-point">
             <div class="mission-icon">&#128200;</div>
             <div class="mission-point-text">
-              <h4>Where the $25,000 goes</h4>
+              <h4>Where the $40,000 goes</h4>
               <p>$10,000 goes to the engineering team and outside specialists. $5,000 covers prototype parts and lab equipment. $3,100 funds the technical documentation and design review preparation. $6,835 is held in reserve to cover cost surprises and program administration.</p>
             </div>
           </div>
@@ -496,7 +528,7 @@
       <div class="goal-card">
         <div class="phase-badge">Stage 1 Active</div>
         <p class="goal-card-title">Activate P3 PRELUDE</p>
-        <p class="goal-card-sub">Every donation moves the program closer to its $25,000 goal — carrying P3 PRELUDE from the California Space Grant award to a completed sensor design review.</p>
+        <p class="goal-card-sub">Every donation moves the program closer to its $40,000 goal — carrying P3 PRELUDE from the California Space Grant award to a completed sensor design review.</p>
         <div class="goal-amounts">
           <div class="goal-amount-block">
             <span class="goal-amount-label">Raised</span>
@@ -504,7 +536,7 @@
           </div>
           <div class="goal-amount-block">
             <span class="goal-amount-label">Goal</span>
-            <span class="goal-amount-value goal-total">$25,000</span>
+            <span class="goal-amount-value goal-total">$40,000</span>
           </div>
         </div>
         <p class="funds-label">How Stage 1 funds are spent</p>
@@ -521,7 +553,7 @@
           <div class="ladder-steps">
             <div class="ladder-step active">
               <div class="ladder-step-name">Stage 1</div>
-              <div class="ladder-step-amt">$25,000</div>
+              <div class="ladder-step-amt">$40,000</div>
             </div>
             <div class="ladder-arrow">&#8250;</div>
             <div class="ladder-step inactive">
